@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brands We Service | Wajid AC Work</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f9ff;
+    color:#102a43;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0066ff,#00b8ff);
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,80,180,.2);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#ffe066;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffe066;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+}
+
+/* HERO */
+.hero{
+    padding:85px 7%;
+    text-align:center;
+    background:
+    radial-gradient(circle at top left,#dff8ff,transparent 40%),
+    linear-gradient(135deg,#ffffff,#eaf6ff);
+}
+
+.badge{
+    display:inline-block;
+    background:#e0f7ff;
+    color:#0077b6;
+    padding:9px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#0077ff;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#607d94;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* SECTION */
+.section{
+    padding:75px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:#6b8194;
+}
+
+/* BRANDS */
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.brand-card{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+    border:1px solid #dcecff;
+    box-shadow:0 12px 35px rgba(0,70,150,.08);
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.brand-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,100,220,.15);
+}
+
+.brand-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#0066ff,#00d4ff);
+}
+
+.brand-icon{
+    width:75px;
+    height:75px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#e6f5ff,#d9faff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.brand-card h3{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.brand-card p{
+    color:#6b8194;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:25px;
+}
+
+.services span{
+    background:#edf7ff;
+    color:#0066cc;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.book-btn{
+    display:inline-block;
+    background:#12b76a;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.book-btn:hover{
+    background:#079455;
+}
+
+/* OTHER BRANDS */
+.other{
+    margin-top:30px;
+    background:linear-gradient(135deg,#082f49,#075985);
+    color:white;
+    border-radius:25px;
+    padding:45px;
+    text-align:center;
+}
+
+.other h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.other p{
+    color:#d9f3ff;
+    max-width:650px;
+    margin:0 auto 25px;
+    line-height:1.6;
+}
+
+.other .book-btn{
+    background:#ffb703;
+    color:#17202a;
+}
+
+.other .book-btn:hover{
+    background:#ffc933;
+}
+
+/* CTA */
+.cta{
+    margin:30px 7% 70px;
+    padding:55px 30px;
+    border-radius:30px;
+    text-align:center;
+    background:linear-gradient(135deg,#0066ff,#00b8ff);
+    color:white;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+    color:#e9f9ff;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#0066ff;
+    padding:14px 25px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:800;
+}
+
+/* FOOTER */
+footer{
+    background:#071d2e;
+    color:#c8d8e5;
+    padding:45px 7% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    line-height:1.7;
+    color:#9fb2c2;
+}
+
+footer a{
+    display:block;
+    color:#b8c9d6;
+    text-decoration:none;
+    margin:9px 0;
+}
+
+footer a:hover{
+    color:#4dd8ff;
+}
+
+.copyright{
+    border-top:1px solid #234052;
+    margin-top:30px;
+    padding-top:20px;
+    text-align:center;
+    color:#8298a8;
+    font-size:14px;
+}
+
+/* FLOATING BUTTONS */
+.float-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:2000;
+}
+
+.float-buttons a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp{
+    background:#12b76a;
+}
+
+.call{
+    background:#0066ff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        padding:65px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:55px 5%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .brand-grid{
+        grid-template-columns:1fr;
+    }
+
+    .brand-card{
+        padding:28px;
+    }
+
+    .other{
+        padding:35px 22px;
+    }
+
+    .cta{
+        margin:20px 5% 50px;
+        padding:45px 20px;
+    }
+
+    .cta h2{
+        font-size:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">WAJID <span>AC WORK</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+        <a href="brands.html">Brands</a>
+    </nav>
+
+    <div class="menu">☰</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="badge">BRANDS WE SERVICE</div>
+
+    <h1>Professional Service For<br><span>Leading AC Brands</span></h1>
+
+    <p>
+        Wajid AC Work provides AC servicing, repair, installation,
+        maintenance and cooling-related services for multiple leading brands.
+    </p>
+
+</section>
+
+
+<!-- BRAND SECTION -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>Our Supported Brands</h2>
+        <p>Select your AC brand and contact us for service.</p>
+    </div>
+
+
+    <div class="brand-grid">
+
+
+        <!-- VOLTAS -->
+
+        <div class="brand-card">
+
+            <div class="brand-icon">❄️</div>
+
+            <h3>Voltas</h3>
+
+            <p>
+                AC servicing, repair, installation, cooling checks,
+                cleaning and maintenance support.
+            </p>
+
+            <div class="services">
+                <span>AC Service</span>
+                <span>Repair</span>
+                <span>Installation</span>
+                <span>Cleaning</span>
+            </div>
+
+            <a
+            class="book-btn"
+            href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work%2C%20I%20need%20service%20for%20my%20Voltas%20AC."
+            target="_blank">
+            WhatsApp Booking
+            </a>
+
+        </div>
+
+
+        <!-- BLUE STAR -->
+
+        <div class="brand-card">
+
+            <div class="brand-icon">🌬️</div>
+
+            <h3>Blue Star</h3>
+
+            <p>
+                Professional service support for Blue Star AC systems,
+                including maintenance and common cooling issues.
+            </p>
+
+            <div class="services">
+                <span>AC Service</span>
+                <span>Repair</span>
+                <span>Cooling Check</span>
+                <span>Maintenance</span>
+            </div>
+
+            <a
+            class="book-btn"
+            href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work%2C%20I%20need%20service%20for%20my%20Blue%20Star%20AC."
+            target="_blank">
+            WhatsApp Booking
+            </a>
+
+        </div>
+
+
+        <!-- LG -->
+
+        <div class="brand-card">
+
+            <div class="brand-icon">⚡</div>
+
+            <h3>LG</h3>
+
+            <p>
+                AC service and repair support including installation,
+                cleaning, cooling checks and maintenance.
+            </p>
+
+            <div class="services">
+                <span>AC Service</span>
+                <span>Repair</span>
+                <span>Installation</span>
+                <span>Maintenance</span>
+            </div>
+
+            <a
+            class="book-btn"
+            href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work%2C%20I%20need%20service%20for%20my%20LG%20AC."
+            target="_blank">
+            WhatsApp Booking
+            </a>
+
+        </div>
+
+
+        <!-- HAIER -->
+
+        <div class="brand-card">
+
+            <div class="brand-icon">🧊</div>
+
+            <h3>Haier</h3>
+
+            <p>
+                Haier AC servicing and repair support with cleaning,
+                installation and cooling-related service.
+            </p>
+
+            <div class="services">
+                <span>AC Service</span>
+                <span>Repair</span>
+                <span>Cleaning</span>
+                <span>Installation</span>
+            </div>
+
+            <a
+            class="book-btn"
+            href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work%2C%20I%20need%20service%20for%20my%20Haier%20AC."
+            target="_blank">
+            WhatsApp Booking
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- OTHER BRANDS -->
+
+    <div class="other">
+
+        <h2>Other Brands?</h2>
+
+        <p>
+            Don't see your AC brand listed above?
+            Contact Wajid AC Work and tell us your brand and service requirement.
+        </p>
+
+        <a
+        class="book-btn"
+        href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work%2C%20I%20need%20service%20for%20an%20AC%20brand%20not%20listed%20on%20your%20website."
+        target="_blank">
+        Ask on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Need AC Service?</h2>
+
+    <p>
+        Send your service requirement directly on WhatsApp.
+    </p>
+
+    <a href="
