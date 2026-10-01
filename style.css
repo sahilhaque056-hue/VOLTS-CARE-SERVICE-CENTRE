@@ -893,3 +893,363 @@ MOBILE
 }
 
   }
+/* =========================================================
+ABOUT SECTION
+========================================================= */
+
+.about-section {
+padding: 100px 0;
+background: #f7faff;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+gap: 80px;
+align-items: center;
+}
+
+.about-visual {
+position: relative;
+min-height: 400px;
+display: grid;
+place-items: center;
+}
+
+.about-card-main {
+width: min(360px, 90%);
+min-height: 310px;
+padding: 40px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border-radius: 25px;
+background:
+linear-gradient(145deg, #09264a, #075cae);
+color: white;
+box-shadow: 0 30px 60px rgba(8, 61, 111, 0.22);
+}
+
+.about-icon {
+width: 60px;
+height: 60px;
+display: grid;
+place-items: center;
+margin-bottom: 30px;
+border-radius: 16px;
+background: rgba(255,255,255,0.12);
+font-size: 27px;
+}
+
+.about-card-main span {
+color: #77c8ff;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 2px;
+}
+
+.about-card-main strong {
+margin-top: 10px;
+font-size: 28px;
+line-height: 1.2;
+}
+
+.about-card-main p {
+margin-top: 18px;
+color: #b9d3e9;
+font-size: 11px;
+}
+
+.about-card-small {
+position: absolute;
+right: 0;
+bottom: 30px;
+padding: 14px 18px;
+border-radius: 12px;
+background: white;
+color: #1761a2;
+font-size: 11px;
+font-weight: 800;
+box-shadow: 0 15px 35px rgba(25, 72, 111, 0.14);
+}
+
+.about-content p {
+margin-top: 18px;
+color: #6e8093;
+font-size: 14px;
+line-height: 1.8;
+}
+
+.about-points {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 13px;
+margin-top: 30px;
+}
+
+.about-points div {
+display: flex;
+align-items: center;
+gap: 9px;
+color: #294965;
+font-size: 11px;
+}
+
+.about-points span {
+width: 22px;
+height: 22px;
+display: grid;
+place-items: center;
+border-radius: 50%;
+background: #e6f3ff;
+color: #0875e1;
+font-size: 9px;
+font-weight: 800;
+}
+
+/* =========================================================
+SERVICE AREA
+========================================================= */
+
+.area-section {
+padding: 75px 0;
+background: white;
+}
+
+.area-box {
+display: flex;
+align-items: center;
+gap: 25px;
+padding: 35px;
+border-radius: 20px;
+background: #edf7ff;
+border: 1px solid #d9ebf9;
+}
+
+.area-icon {
+width: 58px;
+height: 58px;
+display: grid;
+place-items: center;
+flex-shrink: 0;
+border-radius: 16px;
+background: white;
+font-size: 25px;
+}
+
+.area-text {
+flex: 1;
+}
+
+.area-text h2 {
+color: #0a294d;
+font-size: 25px;
+line-height: 1.2;
+}
+
+.area-text h2 span {
+color: #0875e1;
+}
+
+.area-text p {
+margin-top: 8px;
+color: #718398;
+font-size: 12px;
+}
+
+.area-button {
+padding: 13px 18px;
+border-radius: 10px;
+background: #0866df;
+color: white;
+font-size: 11px;
+font-weight: 800;
+white-space: nowrap;
+}
+
+/* =========================================================
+CONTACT
+========================================================= */
+
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.contact-box {
+padding: 28px;
+border: 1px solid #e0e8f0;
+border-radius: 18px;
+background: #fbfdff;
+transition: 0.25s ease;
+}
+
+.contact-box:hover {
+transform: translateY(-5px);
+box-shadow: 0 18px 40px rgba(30, 73, 110, 0.09);
+}
+
+.contact-box-icon {
+width: 48px;
+height: 48px;
+display: grid;
+place-items: center;
+margin-bottom: 20px;
+border-radius: 13px;
+background: #eaf5ff;
+font-size: 20px;
+}
+
+.contact-box small {
+color: #8091a3;
+font-size: 9px;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.contact-box h3 {
+margin-top: 7px;
+color: #163b60;
+font-size: 16px;
+}
+
+.contact-link {
+display: inline-block;
+margin-top: 14px;
+color: #0875e1;
+font-size: 11px;
+font-weight: 800;
+}
+
+.contact-status {
+display: inline-block;
+margin-top: 14px;
+color: #16a85d;
+font-size: 10px;
+font-weight: 700;
+}
+
+/* =========================================================
+MAP
+========================================================= */
+
+.map-box {
+position: relative;
+min-height: 300px;
+margin-top: 25px;
+overflow: hidden;
+display: grid;
+place-items: center;
+border-radius: 22px;
+background:
+linear-gradient(
+135deg,
+#eaf4fb,
+#dcecf7
+);
+border: 1px solid #d8e5ef;
+}
+
+.map-box::before {
+content: "";
+position: absolute;
+inset: 0;
+opacity: 0.35;
+background-image:
+linear-gradient(#b6d0e3 1px, transparent 1px),
+linear-gradient(90deg, #b6d0e3 1px, transparent 1px);
+background-size: 45px 45px;
+}
+
+.map-content {
+position: relative;
+z-index: 2;
+text-align: center;
+}
+
+.map-pin {
+font-size: 35px;
+}
+
+.map-content h3 {
+margin-top: 8px;
+color: #153a5e;
+font-size: 20px;
+}
+
+.map-content p {
+margin: 6px 0 20px;
+color: #71859a;
+font-size: 12px;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+.about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+}
+
+.about-visual {
+    min-height: 350px;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+
+.area-box {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.area-button {
+    margin-left: 83px;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.about-section,
+.area-section {
+    padding: 70px 0;
+}
+
+.about-points {
+    grid-template-columns: 1fr;
+}
+
+.about-card-main {
+    padding: 30px;
+}
+
+.about-card-main strong {
+    font-size: 24px;
+}
+
+.about-card-small {
+    right: 5px;
+    bottom: 15px;
+}
+
+.area-box {
+    padding: 25px;
+}
+
+.area-button {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.map-box {
+    min-height: 260px;
+}
+
+}
