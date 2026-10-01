@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Wajid AC Work</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f9ff;
+    color:#102a43;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0066ff,#00b8ff);
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,80,180,.2);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#ffe066;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffe066;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+    padding:85px 7%;
+    text-align:center;
+    background:
+    radial-gradient(circle at top left,#d9f7ff,transparent 40%),
+    linear-gradient(135deg,#fff,#eaf6ff);
+}
+
+.badge{
+    display:inline-block;
+    background:#e0f7ff;
+    color:#006bb6;
+    padding:9px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#006cff;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#607d94;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.section{
+    padding:75px 7%;
+}
+
+.contact-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:30px;
+}
+
+/* CONTACT CARDS */
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #dcecff;
+    box-shadow:0 10px 30px rgba(0,70,150,.07);
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    min-width:58px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    background:#e7f7ff;
+}
+
+.info-card h3{
+    margin-bottom:6px;
+}
+
+.info-card p{
+    color:#71879a;
+    line-height:1.5;
+}
+
+.info-card a{
+    color:#006cff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FORM */
+
+.form-box{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    border:1px solid #dcecff;
+    box-shadow:0 15px 40px rgba(0,70,150,.08);
+}
+
+.form-box h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.form-box>p{
+    color:#71879a;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px 15px;
+    border:1px solid #d6e5f0;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    background:#fbfdff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#008cff;
+    box-shadow:0 0 0 3px rgba(0,140,255,.1);
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    padding:15px;
+    border-radius:11px;
+    background:#12b76a;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#079455;
+}
+
+/* QUICK CONTACT */
+
+.quick{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.quick a{
+    text-align:center;
+    padding:14px;
+    border-radius:11px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.call-btn{
+    background:#e9f2ff;
+    color:#0066ff;
+}
+
+.whatsapp-btn{
+    background:#e7fff2;
+    color:#079455;
+}
+
+/* CTA */
+
+.cta{
+    margin:20px 7% 70px;
+    padding:55px 30px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#0066ff,#00b8ff);
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#e8f8ff;
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#0066ff;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:12px;
+    font-weight:800;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d2e;
+    color:#c8d8e5;
+    padding:45px 7% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#9fb2c2;
+    line-height:1.7;
+}
+
+footer a{
+    display:block;
+    color:#b8c9d6;
+    text-decoration:none;
+    margin:9px 0;
+}
+
+footer a:hover{
+    color:#4dd8ff;
+}
+
+.copyright{
+    border-top:1px solid #234052;
+    margin-top:30px;
+    padding-top:20px;
+    text-align:center;
+    color:#8298a8;
+    font-size:14px;
+}
+
+/* FLOATING BUTTONS */
+
+.float-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:2000;
+}
+
+.float-buttons a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:23px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.call{
+    background:#0066ff;
+}
+
+.whatsapp{
+    background:#12b76a;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        padding:65px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:55px 5%;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-box{
+        padding:25px;
+    }
+
+    .quick{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        margin:20px 5% 50px;
+        padding:45px 20px;
+    }
+
+    .cta h2{
+        font-size:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        WAJID <span>AC WORK</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+        <a href="brands.html">Brands</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="menu">☰</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="badge">CONTACT WAJID AC WORK</div>
+
+    <h1>Let's <span>Talk About Your Service</span></h1>
+
+    <p>
+        Need AC repair, servicing, installation or appliance service?
+        Contact us directly by phone or WhatsApp.
+    </p>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="section">
+
+    <div class="contact-grid">
+
+        <!-- LEFT -->
+
+        <div class="contact-info">
+
+            <div class="info-card">
+
+                <div class="icon">📞</div>
+
+                <div>
+                    <h3>Call Us</h3>
+
+                    <p>
+                        Speak directly with Wajid AC Work.
+                    </p>
+
+                    <a href="tel:+919933869133">
+                        +91 99338 69133
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">💬</div>
+
+                <div>
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        Send your service requirement.
+                    </p>
+
+                    <a
+                    href="https://wa.me/919933869133"
+                    target="_blank">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">❄️</div>
+
+                <div>
+                    <h3>AC Services</h3>
+
+                    <p>
+                        Service, repair, cleaning, installation
+                        and cooling checks.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">🏠</div>
+
+                <div>
+                    <h3>Home Appliances</h3>
+
+                    <p>
+                        Refrigerator, washing machine and
+                        air cooler service support.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="form-box">
+
+            <h2>Send a Service Enquiry</h2>
+
+            <p>
+                Fill in your details and continue through WhatsApp.
+            </p>
+
+
+            <form id="contactForm">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Mobile Number</label>
+
+                    <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter mobile number"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Appliance</label>
+
+                    <select id="appliance" required>
+
+                        <option value="">Select Appliance</option>
+
+                        <option>Air Conditioner</option>
+                        <option>Refrigerator</option>
+                        <option>Washing Machine</option>
+                        <option>Air Cooler</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Service Required</label>
+
+                    <select id="service" required>
+
+                        <option value="">Select Service</option>
+
+                        <option>General Service</option>
+                        <option>Deep Cleaning</option>
+                        <option>Repair</option>
+                        <option>Installation</option>
+                        <option>Uninstallation</option>
+                        <option>Cooling Problem</option>
+                        <option>Water Leakage</option>
+                        <option>Gas / Cooling Check</option>
+                        <option>Electrical / PCB</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                    id="message"
+                    placeholder="Describe your problem..."></textarea>
+
+                </div>
+
+
+                <button
+                type="submit"
+                class="submit-btn">
+                    Send Enquiry on WhatsApp
+                </button>
+
+            </form>
+
+
+            <div class="quick">
+
+                <a
+                class="call-btn"
+                href="tel:+919933869133">
+                    📞 Call Now
+                </a>
+
+                <a
+                class="whatsapp-btn"
+                href="https://wa.me/919933869133"
+                target="_blank">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Ready to Book a Service?</h2>
+
+    <p>
+        Use our dedicated booking page to submit complete service details.
+    </p>
+
+    <a href="booking.html">
+        Open Booking Page
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>Wajid AC Work</h3>
+
+            <p>
+                AC and home-appliance service support for
+                repair, installation, cleaning and maintenance.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="brands.html">Brands</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <a href="tel:+919933869133">
+                📞 +91 99338 69133
+            </a>
+
+            <a
+            href="https://wa.me/919933869133"
+            target="_blank">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Wajid AC Work. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="float-buttons">
+
+    <a
+    class="call"
+    href="tel:+919933869133">
+        ☎
+    </a>
+
+    <a
+    class="whatsapp"
+    href="https://wa.me/919933869133"
+    target="_blank">
+        💬
+    </a>
+
+</div>
+
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const appliance =
+        document.getElementById("appliance").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const message =
+        document.getElementById("message").value;
+
+    const whatsappMessage =
+`Hello Wajid AC Work,
+
+I want to make a service enquiry.
+
+Name: ${name}
+Mobile: ${phone}
+Appliance: ${appliance}
+Service Required: ${service}
+Problem / Message: ${message}
+
+Please let me know about the service.`;
+
+    const url =
+        "https://wa.me/919933869133?text="
+        + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+  </html>
