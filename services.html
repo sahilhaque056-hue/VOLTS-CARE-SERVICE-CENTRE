@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Wajid AC Work</title>
+
+<meta name="description"
+content="Wajid AC Work professional AC repair, servicing, installation and home appliance services.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f9ff;
+    color:#102746;
+}
+
+:root{
+    --blue:#0759d7;
+    --cyan:#00b8f0;
+    --dark:#061d3d;
+    --green:#16b95b;
+    --orange:#ff7b19;
+    --light:#e9f8ff;
+    --white:#fff;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #dcebf6;
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:21px;
+    font-weight:900;
+}
+
+.logo-icon{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0759d7,#00c8ff);
+    color:white;
+    font-size:23px;
+}
+
+.logo span{
+    color:var(--blue);
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    color:#405a76;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+.nav-btn{
+    background:linear-gradient(135deg,#0759d7,#00aef3);
+    color:white;
+    padding:13px 20px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* PAGE HERO */
+
+.page-hero{
+    position:relative;
+    overflow:hidden;
+    padding:85px 0;
+    text-align:center;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,190,255,.22),transparent 30%),
+    radial-gradient(circle at 80% 80%,rgba(0,70,220,.18),transparent 35%),
+    linear-gradient(135deg,#eaf8ff,#fff);
+}
+
+.page-hero:before{
+    content:"❄";
+    position:absolute;
+    right:8%;
+    top:20px;
+    font-size:160px;
+    color:rgba(0,160,230,.06);
+}
+
+.page-hero .tag{
+    display:inline-block;
+    padding:8px 15px;
+    background:#dff5ff;
+    border:1px solid #bceaff;
+    border-radius:30px;
+    color:#0076b9;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.page-hero h1{
+    margin-top:18px;
+    font-size:clamp(40px,6vw,62px);
+    color:#09284d;
+}
+
+.page-hero h1 span{
+    color:#0876df;
+}
+
+.page-hero p{
+    max-width:680px;
+    margin:18px auto 0;
+    color:#62788e;
+    line-height:1.8;
+}
+
+/* SERVICE SECTION */
+
+.services-section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:#008bd0;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#09284d;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#71849a;
+}
+
+/* SERVICE GRID */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    position:relative;
+    overflow:hidden;
+    background:white;
+    border:1px solid #dcebf5;
+    border-radius:22px;
+    padding:28px;
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#71d4fa;
+    box-shadow:0 20px 45px rgba(0,87,150,.13);
+}
+
+.service-card:after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    right:-55px;
+    bottom:-55px;
+    border-radius:50%;
+    background:rgba(0,180,245,.07);
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    background:linear-gradient(135deg,#e2f8ff,#cceeff);
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:20px;
+    color:#092e55;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    font-size:13px;
+    line-height:1.7;
+    color:#71849a;
+    min-height:65px;
+}
+
+.price-note{
+    display:inline-block;
+    margin-top:15px;
+    color:#0874d8;
+    font-size:12px;
+    font-weight:800;
+}
+
+.book-btn{
+    display:block;
+    margin-top:18px;
+    width:100%;
+    padding:13px;
+    text-align:center;
+    border-radius:11px;
+    background:linear-gradient(135deg,#0759d7,#00aef3);
+    color:white;
+    font-size:13px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.book-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* APPLIANCE SECTION */
+
+.appliance-section{
+    padding:85px 0;
+    background:
+    radial-gradient(circle at 0 50%,rgba(0,180,255,.12),transparent 30%),
+    #edf8ff;
+}
+
+.appliance-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.appliance-card{
+    position:relative;
+    min-height:270px;
+    padding:30px;
+    border-radius:24px;
+    overflow:hidden;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.appliance-card:nth-child(1){
+    background:linear-gradient(135deg,#0759d7,#00aeea);
+}
+
+.appliance-card:nth-child(2){
+    background:linear-gradient(135deg,#008bba,#00b987);
+}
+
+.appliance-card:nth-child(3){
+    background:linear-gradient(135deg,#303c98,#7554d8);
+}
+
+.big-icon{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:110px;
+    opacity:.18;
+}
+
+.appliance-card h3{
+    font-size:25px;
+    margin-bottom:9px;
+}
+
+.appliance-card p{
+    font-size:13px;
+    line-height:1.7;
+    opacity:.9;
+}
+
+/* PROCESS */
+
+.process{
+    padding:85px 0;
+    background:white;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    text-align:center;
+    padding:25px;
+}
+
+.process-number{
+    width:55px;
+    height:55px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0759d7,#00b9f0);
+    color:white;
+    font-weight:900;
+    font-size:18px;
+    box-shadow:0 10px 25px rgba(0,110,220,.2);
+}
+
+.process-card h3{
+    color:#092e55;
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#71849a;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* CTA */
+
+.cta{
+    padding:75px 0;
+    background:
+    radial-gradient(circle at 90% 20%,rgba(0,202,255,.25),transparent 30%),
+    linear-gradient(135deg,#0759d7,#06244b);
+    color:white;
+}
+
+.cta-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:37px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#c4ddf5;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 21px;
+    border-radius:12px;
+    font-weight:800;
+    font-size:13px;
+}
+
+.call{
+    background:white;
+    color:#0759d7;
+}
+
+.whatsapp{
+    background:#16b95b;
+    color:white;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 0 20px;
+    background:#04152e;
+    color:white;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-size:23px;
+    font-weight:900;
+    margin-bottom:13px;
+}
+
+.footer-logo span{
+    color:#00b9f0;
+}
+
+footer p{
+    color:#91a8c0;
+    font-size:13px;
+    line-height:1.7;
+}
+
+footer h4{
+    margin-bottom:16px;
+}
+
+footer a{
+    display:block;
+    color:#91a8c0;
+    margin-bottom:10px;
+    font-size:13px;
+}
+
+footer a:hover{
+    color:#00b9f0;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#698199;
+    font-size:12px;
+}
+
+/* FLOAT BUTTONS */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.float-call{
+    background:#0759d7;
+}
+
+.float-wa{
+    background:#16b95b;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .appliance-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:16px;
+    }
+
+    .logo-icon{
+        width:38px;
+        height:38px;
+    }
+
+    .nav-btn{
+        padding:10px 13px;
+        font-size:11px;
+    }
+
+    .page-hero{
+        padding:65px 0;
+    }
+
+    .page-hero h1{
+        font-size:40px;
+    }
+
+    .services-section,
+    .appliance-section,
+    .process{
+        padding:65px 0;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:29px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="index.html" class="logo">
+
+<div class="logo-icon">
+❄
+</div>
+
+WAJID <span>AC WORK</span>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="services.html">
+Services
+</a>
+
+<a href="index.html#appliances">
+Appliances
+</a>
+
+<a href="index.html#brands">
+Brands
+</a>
+
+<a href="index.html#contact">
+Contact
+</a>
+
+</nav>
+
+
+<a href="booking.html" class="nav-btn">
+BOOK SERVICE
+</a>
+
+</div>
+
+</header>
+
+
+<!-- PAGE HERO -->
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="tag">
+WAJID AC WORK • SERVICES
+</div>
+
+<h1>
+Professional <span>Services</span>
+</h1>
+
+<p>
+Complete AC and home appliance service solutions
+for residential and commercial requirements.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- AC SERVICES -->
+
+<section class="services-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>AC SERVICES</small>
+
+<h2>
+Complete AC Solutions
+</h2>
+
+<p>
+Professional AC service, repair, installation
+and maintenance.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<!-- 1 -->
+
+<div class="service-card">
+
+<div class="icon">
+❄️
+</div>
+
+<h3>
+AC General Service
+</h3>
+
+<p>
+Complete AC servicing to maintain cooling,
+airflow and overall performance.
+</p>
+
+<span class="price-note">
+Professional Service
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20want%20to%20book%20AC%20General%20Service."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="service-card">
+
+<div class="icon">
+🧹
+</div>
+
+<h3>
+AC Deep Cleaning
+</h3>
+
+<p>
+Deep cleaning of AC indoor components
+for cleaner and better airflow.
+</p>
+
+<span class="price-note">
+Cleaning & Maintenance
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20want%20to%20book%20AC%20Deep%20Cleaning."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="service-card">
+
+<div class="icon">
+🔧
+</div>
+
+<h3>
+AC Repair
+</h3>
+
+<p>
+Inspection and repair for common AC
+performance and operational problems.
+</p>
+
+<span class="price-note">
+Repair Service
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20AC%20Repair%20Service."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="service-card">
+
+<div class="icon">
+⚙️
+</div>
+
+<h3>
+AC Installation
+</h3>
+
+<p>
+Professional installation service for
+split and other compatible AC systems.
+</p>
+
+<span class="price-note">
+Installation Service
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20AC%20Installation%20Service."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="service-card">
+
+<div class="icon">
+🔄
+</div>
+
+<h3>
+AC Uninstallation
+</h3>
+
+<p>
+Careful AC removal and uninstallation
+service for relocation or replacement.
+</p>
+
+<span class="price-note">
+Professional Handling
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20AC%20Uninstallation%20Service."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="service-card">
+
+<div class="icon">
+💨
+</div>
+
+<h3>
+Cooling Problem
+</h3>
+
+<p>
+Inspection for insufficient cooling,
+airflow and performance issues.
+</p>
+
+<span class="price-note">
+Inspection & Repair
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20my%20AC%20has%20a%20cooling%20problem."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="service-card">
+
+<div class="icon">
+💧
+</div>
+
+<h3>
+Water Leakage
+</h3>
+
+<p>
+Inspection and service for common
+indoor AC water leakage problems.
+</p>
+
+<span class="price-note">
+Repair Service
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20my%20AC%20has%20a%20water%20leakage%20problem."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="service-card">
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Electrical / PCB
+</h3>
+
+<p>
+Inspection of electrical and control
+system related AC problems.
+</p>
+
+<span class="price-note">
+Technical Service
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20technical%20AC%20service."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="service-card">
+
+<div class="icon">
+🧊
+</div>
+
+<h3>
+Gas / Cooling Check
+</h3>
+
+<p>
+AC cooling-system inspection and
+refrigerant-related service when required.
+</p>
+
+<span class="price-note">
+Inspection Required
+</span>
+
+<a class="book-btn"
+href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20AC%20cooling%20gas%20checking."
+target="_blank">
+💬 Book on WhatsApp
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOME APPLIANCES -->
+
+<section class="appliance-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>HOME APPLIANCES</small>
+
+<h2>
+Appliance Repair & Service
+</h2>
+
+<p>
+Service support for common household appliances.
+</p>
+
+</div>
+
+
+<div class="appliance-grid">
+
+
+<div class="appliance-card">
+
+<div class="big-icon">
+🧊
+</div>
+
+<h3>
+Refrigerator
+</h3>
+
+<p>
+Cooling, maintenance and repair
+service for refrigerators.
+</p>
+
+<br>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20Refrigerator%20Service."
+target="_blank"
+class="btn whatsapp">
+💬 Book Service
+</a>
+
+</div>
+
+
+<div class="appliance-card">
+
+<div class="big-icon">
+🧺
+</div>
+
+<h3>
+Washing Machine
+</h3>
+
+<p>
+Washing machine inspection,
+repair and maintenance.
+</p>
+
+<br>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20Washing%20Machine%20Service."
+target="_blank"
+class="btn whatsapp">
+💬 Book Service
+</a>
+
+</div>
+
+
+<div class="appliance-card">
+
+<div class="big-icon">
+💨
+</div>
+
+<h3>
+Air Cooler
+</h3>
+
+<p>
+Cooler servicing, repair and
+maintenance service.
+</p>
+
+<br>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20need%20Cooler%20Service."
+target="_blank"
+class="btn whatsapp">
+💬 Book Service
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>HOW IT WORKS</small>
+
+<h2>
+Simple Service Booking
+</h2>
+
+<p>
+Book your service in just a few simple steps.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<div class="process-number">
+01
+</div>
+
+<h3>
+Contact Us
+</h3>
+
+<p>
+Call or message us on WhatsApp.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+02
+</div>
+
+<h3>
+Tell Your Problem
+</h3>
+
+<p>
+Tell us your appliance and service requirement.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+03
+</div>
+
+<h3>
+Schedule Service
+</h3>
+
+<p>
+Discuss a convenient service time.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+04
+</div>
+
+<h3>
+Service Visit
+</h3>
+
+<p>
+Get your appliance inspected and serviced.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-box">
+
+<div>
+
+<h2>
+Need a Service?
+</h2>
+
+<p>
+Contact Wajid AC Work today.
+</p>
+
+</div>
+
+
+<div class="buttons">
+
+<a href="tel:+919933869133"
+class="btn call">
+☎ Call Now
+</a>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20want%20to%20book%20a%20service."
+target="_blank"
+class="btn whatsapp">
+💬 WhatsApp Booking
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-logo">
+WAJID <span>AC WORK</span>
+</div>
+
+<p>
+Professional AC & Home Appliance
+Service Centre.
+</p>
+
+<br>
+
+<p>
+AC • Refrigerator • Washing Machine • Cooler
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="services.html">
+Services
+</a>
+
+<a href="booking.html">
+Booking
+</a>
+
+<a href="index.html#brands">
+Brands
+</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<a href="tel:+919933869133">
+☎ +91 99338 69133
+</a>
+
+<a href="https://wa.me/919933869133"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a href="booking.html">
+📅 Book Service
+</a>
+
+</div>
+
+</div>
+
+
+<div class="container copyright">
+
+© 2026 WAJID AC WORK — All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+<a href="tel:+919933869133"
+class="float float-call">
+☎
+</a>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20want%20to%20book%20a%20service."
+target="_blank"
+class="float float-wa">
+💬
+</a>
+
+</div>
+
+
+</body>
+  </html>
