@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book a Service | Wajid AC Work</title>
+
+<meta name="description"
+content="Book AC and home appliance repair service from Wajid AC Work.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f9ff;
+    color:#102746;
+}
+
+:root{
+    --blue:#0759d7;
+    --cyan:#00b9f0;
+    --dark:#061d3d;
+    --green:#16b95b;
+    --orange:#ff7b19;
+    --border:#dcebf5;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:21px;
+    font-weight:900;
+}
+
+.logo-icon{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:23px;
+    background:linear-gradient(135deg,#0759d7,#00c8ff);
+    box-shadow:0 8px 22px rgba(0,110,220,.25);
+}
+
+.logo span{
+    color:var(--blue);
+}
+
+.back-link{
+    color:#47617c;
+    font-size:14px;
+    font-weight:800;
+}
+
+.back-link:hover{
+    color:var(--blue);
+}
+
+/* HERO */
+
+.booking-hero{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    padding:65px 0 75px;
+
+    background:
+    radial-gradient(circle at 15% 20%,rgba(0,190,255,.20),transparent 30%),
+    radial-gradient(circle at 85% 70%,rgba(0,70,220,.16),transparent 35%),
+    linear-gradient(135deg,#eaf8ff,#ffffff);
+}
+
+.booking-hero:before{
+    content:"❄";
+    position:absolute;
+    left:7%;
+    top:25px;
+    font-size:120px;
+    color:rgba(0,140,230,.05);
+}
+
+.booking-hero:after{
+    content:"⚙";
+    position:absolute;
+    right:7%;
+    bottom:10px;
+    font-size:110px;
+    color:rgba(0,140,230,.05);
+}
+
+.booking-tag{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+    background:#dff5ff;
+    border:1px solid #bceaff;
+    color:#0076b9;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.booking-hero h1{
+    position:relative;
+    margin-top:16px;
+    font-size:clamp(38px,6vw,58px);
+    color:#09284d;
+}
+
+.booking-hero h1 span{
+    color:#0876df;
+}
+
+.booking-hero p{
+    max-width:650px;
+    margin:15px auto 0;
+    color:#687d92;
+    line-height:1.8;
+}
+
+/* MAIN */
+
+.booking-section{
+    padding:70px 0 90px;
+}
+
+.booking-layout{
+    display:grid;
+    grid-template-columns:1.45fr .75fr;
+    gap:25px;
+    align-items:start;
+}
+
+/* FORM */
+
+.booking-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 18px 50px rgba(20,75,120,.09);
+}
+
+.form-title{
+    margin-bottom:28px;
+}
+
+.form-title h2{
+    color:#092e55;
+    font-size:27px;
+    margin-bottom:7px;
+}
+
+.form-title p{
+    color:#73879b;
+    font-size:13px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    color:#264562;
+    font-size:12px;
+    font-weight:800;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid #d6e6f1;
+    background:#f9fcff;
+    border-radius:11px;
+    padding:14px;
+    outline:none;
+    font-family:inherit;
+    font-size:13px;
+    color:#183957;
+    transition:.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#4ecbfa;
+    background:white;
+    box-shadow:0 0 0 4px rgba(0,185,240,.08);
+}
+
+textarea{
+    min-height:125px;
+    resize:vertical;
+}
+
+.required{
+    color:#e53935;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:22px;
+    border:none;
+    padding:16px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#16b95b,#0ba84d);
+    color:white;
+    font-size:14px;
+    font-weight:900;
+    cursor:pointer;
+    box-shadow:0 12px 25px rgba(22,185,91,.20);
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+}
+
+.note{
+    margin-top:13px;
+    text-align:center;
+    color:#8092a4;
+    font-size:11px;
+}
+
+/* SIDE CARD */
+
+.side-column{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-card{
+    border-radius:22px;
+    padding:28px;
+    color:white;
+    background:
+    radial-gradient(circle at 90% 10%,rgba(0,210,255,.25),transparent 35%),
+    linear-gradient(135deg,#0759d7,#06254d);
+    box-shadow:0 18px 40px rgba(0,54,110,.18);
+}
+
+.contact-card .big-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact-card h3{
+    font-size:22px;
+    margin-bottom:9px;
+}
+
+.contact-card p{
+    color:#c8ddf1;
+    font-size:13px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.contact-btn{
+    display:block;
+    text-align:center;
+    padding:13px;
+    border-radius:11px;
+    background:white;
+    color:#0759d7;
+    font-weight:900;
+    font-size:13px;
+}
+
+.info-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:23px;
+}
+
+.info-card h3{
+    color:#092e55;
+    margin-bottom:17px;
+}
+
+.info-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.info-row:last-child{
+    margin-bottom:0;
+}
+
+.info-icon{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e4f7ff;
+    font-size:18px;
+}
+
+.info-row strong{
+    display:block;
+    color:#244562;
+    font-size:12px;
+}
+
+.info-row span{
+    display:block;
+    color:#788b9d;
+    font-size:11px;
+    margin-top:3px;
+}
+
+/* SERVICE CHOICES */
+
+.service-choice{
+    margin-top:30px;
+}
+
+.service-choice h3{
+    color:#092e55;
+    margin-bottom:16px;
+    font-size:17px;
+}
+
+.choice-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.choice{
+    border:1px solid #dcebf5;
+    background:#f7fcff;
+    border-radius:12px;
+    padding:13px 8px;
+    text-align:center;
+    color:#3e5a75;
+    font-size:11px;
+    font-weight:800;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 0 20px;
+    background:#04152e;
+    color:white;
+}
+
+.footer-content{
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.footer-logo span{
+    color:#00b9f0;
+}
+
+.footer-content p{
+    color:#849bb2;
+    font-size:12px;
+    line-height:1.7;
+}
+
+.copyright{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#627a93;
+    font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .booking-layout{
+        grid-template-columns:1fr;
+    }
+
+    .side-column{
+        order:-1;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        min-height:68px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .logo-icon{
+        width:38px;
+        height:38px;
+    }
+
+    .back-link{
+        font-size:12px;
+    }
+
+    .booking-hero{
+        padding:55px 0 60px;
+    }
+
+    .booking-hero h1{
+        font-size:39px;
+    }
+
+    .booking-section{
+        padding:45px 0 65px;
+    }
+
+    .booking-card{
+        padding:22px;
+        border-radius:20px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .choice-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="index.html" class="logo">
+
+<div class="logo-icon">
+❄
+</div>
+
+WAJID <span>AC WORK</span>
+
+</a>
+
+<a href="index.html" class="back-link">
+← Back to Home
+</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="booking-hero">
+
+<div class="container">
+
+<div class="booking-tag">
+WAJID AC WORK • SERVICE BOOKING
+</div>
+
+<h1>
+Book Your <span>Service</span>
+</h1>
+
+<p>
+Fill in your service details below. After submitting,
+WhatsApp will open with your booking information ready
+to send to Wajid AC Work.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking-section">
+
+<div class="container booking-layout">
+
+
+<!-- FORM -->
+
+<div class="booking-card">
+
+<div class="form-title">
+
+<h2>
+Service Booking Form
+</h2>
+
+<p>
+Please provide accurate details so we can understand
+your service requirement.
+</p>
+
+</div>
+
+
+<form id="bookingForm">
+
+
+<div class="form-grid">
+
+
+<!-- NAME -->
+
+<div class="form-group">
+
+<label>
+Customer Name <span class="required">*</span>
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div class="form-group">
+
+<label>
+Mobile Number <span class="required">*</span>
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter mobile number"
+required>
+
+</div>
+
+
+<!-- APPLIANCE -->
+
+<div class="form-group">
+
+<label>
+Appliance <span class="required">*</span>
+</label>
+
+<select id="appliance" required>
+
+<option value="">
+Select Appliance
+</option>
+
+<option>AC</option>
+
+<option>Refrigerator</option>
+
+<option>Washing Machine</option>
+
+<option>Air Cooler</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="form-group">
+
+<label>
+Service Required <span class="required">*</span>
+</label>
+
+<select id="service" required>
+
+<option value="">
+Select Service
+</option>
+
+<option>AC General Service</option>
+
+<option>AC Deep Cleaning</option>
+
+<option>AC Repair</option>
+
+<option>AC Installation</option>
+
+<option>AC Uninstallation</option>
+
+<option>Cooling Problem</option>
+
+<option>Water Leakage</option>
+
+<option>Electrical / PCB Problem</option>
+
+<option>Gas / Cooling Check</option>
+
+<option>Refrigerator Service</option>
+
+<option>Washing Machine Service</option>
+
+<option>Cooler Service</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<!-- BRAND -->
+
+<div class="form-group">
+
+<label>
+Brand
+</label>
+
+<select id="brand">
+
+<option value="">
+Select Brand
+</option>
+
+<option>Voltas</option>
+
+<option>Blue Star</option>
+
+<option>LG</option>
+
+<option>Haier</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<!-- DATE -->
+
+<div class="form-group">
+
+<label>
+Preferred Date
+</label>
+
+<input
+type="date"
+id="date">
+
+</div>
+
+
+<!-- ADDRESS -->
+
+<div class="form-group full">
+
+<label>
+Service Address <span class="required">*</span>
+</label>
+
+<input
+type="text"
+id="address"
+placeholder="Enter complete service address"
+required>
+
+</div>
+
+
+<!-- PROBLEM -->
+
+<div class="form-group full">
+
+<label>
+Problem / Additional Details
+</label>
+
+<textarea
+id="problem"
+placeholder="Describe the appliance problem or any additional information..."></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="submit-btn">
+
+💬 SEND BOOKING ON WHATSAPP
+
+</button>
+
+<div class="note">
+Your details will be placed into a WhatsApp message.
+</div>
+
+
+</form>
+
+</div>
+
+
+<!-- SIDE -->
+
+<div class="side-column">
+
+
+<div class="contact-card">
+
+<div class="big-icon">
+💬
+</div>
+
+<h3>
+Quick WhatsApp Booking
+</h3>
+
+<p>
+Prefer WhatsApp? Contact Wajid AC Work directly
+for service booking and enquiries.
+</p>
+
+<a href="https://wa.me/919933869133?text=Hello%20Wajid%20AC%20Work,%20I%20want%20to%20book%20a%20service."
+target="_blank"
+class="contact-btn">
+
+Open WhatsApp
+
+</a>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+Service Information
+</h3>
+
+
+<div class="info-row">
+
+<div class="info-icon">
+☎
+</div>
+
+<div>
+<strong>Phone</strong>
+<span>+91 99338 69133</span>
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<div class="info-icon">
+💬
+</div>
+
+<div>
+<strong>WhatsApp</strong>
+<span>Direct Booking Available</span>
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<div class="info-icon">
+🔧
+</div>
+
+<div>
+<strong>Services</strong>
+<span>AC & Home Appliances</span>
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<div class="info-icon">
+🏠
+</div>
+
+<div>
+<strong>Service Type</strong>
+<span>Home / Residential Service</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+Available Services
+</h3>
+
+<div class="choice-grid">
+
+<div class="choice">
+❄ AC
+</div>
+
+<div class="choice">
+🧊 Refrigerator
+</div>
+
+<div class="choice">
+🧺 Washing Machine
+</div>
+
+<div class="choice">
+💨 Cooler
+</div>
+
+<div class="choice">
+🔧 Repair
+</div>
+
+<div class="choice">
+🛠 Service
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div class="footer-logo">
+WAJID <span>AC WORK</span>
+</div>
+
+<p>
+Professional AC & Home Appliance Service Centre.
+</p>
+
+<p>
+AC • Refrigerator • Washing Machine • Cooler
+</p>
+
+<div class="copyright">
+
+© 2026 WAJID AC WORK — All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const appliance =
+        document.getElementById("appliance").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const brand =
+        document.getElementById("brand").value || "Not specified";
+
+    const date =
+        document.getElementById("date").value || "Not specified";
+
+    const address =
+        document.getElementById("address").value.trim();
+
+    const problem =
+        document.getElementById("problem").value.trim() || "Not specified";
+
+
+    const message =
+`🔧 *NEW SERVICE BOOKING*
+
+👤 *Customer:* ${name}
+
+📞 *Mobile:* ${phone}
+
+🏠 *Appliance:* ${appliance}
+
+🛠️ *Service Required:* ${service}
+
+🏷️ *Brand:* ${brand}
+
+📅 *Preferred Date:* ${date}
+
+📍 *Service Address:* ${address}
+
+📝 *Problem / Details:*
+${problem}
+
+━━━━━━━━━━━━━━━━
+*WAJID AC WORK*
+Professional AC & Home Appliance Service
+`;
+
+    const whatsappNumber = "919933869133";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+
+</body>
+  </html>
